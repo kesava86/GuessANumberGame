@@ -99,18 +99,26 @@ body{
 
     .container{
     position: absolute;
-    top: 180Px;
-    left: 10px;
+    top: 150Px;
+    left: 5px;
 }
 
 .input {
-    width: 250px;
+    width: 200px;
     height: 40px;
     margin-left: 0px;
 }
+
+.btn {
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 .heading{
-    margin: 40px 20px;
-    font-size: 24px;
+    margin: 50px 0 30px 18px;
+    font-size: 18px;
 }
 }
 
