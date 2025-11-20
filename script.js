@@ -36,7 +36,7 @@ p.innerText = `No of attempts : ${attempt}`
 
 box.appendChild(p)
 
-const result = document.createElement("h1")
+const result = document.createElement("h3")
 result.classList.add("result")
 box.appendChild(result)
 content.appendChild(box)
