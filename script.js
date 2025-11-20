@@ -14,22 +14,17 @@ input.type = "number"
 input.placeholder = "Enter a number"
 input.id = "userInput"
 input.classList.add("input")
-input.maxLength
 
 const button = document.createElement("button")
 button.textContent = "Enter"
 button.type = "button"
 button.classList.add("btn")
 
-
 form.appendChild(input)
 form.appendChild(button)
 
-
 box.appendChild(h1)
 box.appendChild(form)
-
-
 
 const num = Math.floor(Math.random() * 9) + 1
 console.log(num)
@@ -46,9 +41,7 @@ result.classList.add("result")
 box.appendChild(result)
 content.appendChild(box)
 
-
 let count = 0;
-
 
 function atAttempt() {
   result.innerText = `You are Out of Attempts. The number is ${num}`
@@ -71,7 +64,6 @@ button.addEventListener("click", (e) => {
   const userNum = document.getElementById("userInput").value
   console.log(userNum)
 
-
   if (userNum < 1 || userNum > 9) {
     result.innerText = "Please enter a number between 1 and 9";
     return;
@@ -81,7 +73,6 @@ button.addEventListener("click", (e) => {
   attempt--;
   
   p.innerText = `No of attempts remaining : ${attempt}`
-
 
   if (userNum == num) {
     if (count == 1) {
@@ -95,23 +86,17 @@ button.addEventListener("click", (e) => {
     return;
   }
   else if (userNum > num) {
-    result.innerText = `Your number ${userNum} is Higher, Guess smaller number than this`
+    result.innerText = `Your number ${userNum} is Big, Guess smaller number than this`
   }
   else {
-    result.innerText = `Your number ${userNum} is Lower, Guess Higher number than this`
+    result.innerText = `Your number ${userNum} is Small, Guess Higher number than this`
   }
   input.value = ""
-
-
 
   if (attempt <= 0) {
     atAttempt();
   }
-
-
-
 })
-
 
 function finishGame() {
 
@@ -121,7 +106,6 @@ function finishGame() {
   const restartBtn = document.createElement("button")
   restartBtn.textContent = "Restart"
   restartBtn.classList.add("btn")
-
 
   restartBtn.addEventListener("click", () => {
     location.reload();
