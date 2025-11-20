@@ -44,12 +44,12 @@ content.appendChild(box)
 let count = 0;
 
 function atAttempt() {
-  result.innerText = `You are Out of Attempts. The number is ${num}`
+  result.innerText = `You are Out of Attempts.`
   p.innerText = ""
 
   setTimeout(() => {
-    result.innerText = "Game is Over "
-  }, 2000)
+    result.innerText = `The number is " ${num} "`
+  }, 1000)
 
   setTimeout(() => {
     result.innerText = "Please Restart to play Again!!"
@@ -76,20 +76,20 @@ button.addEventListener("click", (e) => {
 
   if (userNum == num) {
     if (count == 1) {
-      result.innerText = `You guessed the Number correct in First attempt`
+      result.innerText = ` Great !! You guessed in First attempt`
     }
     else {
-      result.innerText = `You guessed the Number correct in ${count} attempts`
+      result.innerText = `Nice !! You guessed in ${count} attempts`
     }
     p.innerText = ""
     finishGame();
     return;
   }
   else if (userNum > num) {
-    result.innerText = `Your number ${userNum} is Big, Guess smaller number than this`
+    result.innerText = `The number ${userNum} is Big. Try smaller number than this`
   }
   else {
-    result.innerText = `Your number ${userNum} is Small, Guess Higher number than this`
+    result.innerText = `The number ${userNum} is Small. Try Higher number than this`
   }
   input.value = ""
 
